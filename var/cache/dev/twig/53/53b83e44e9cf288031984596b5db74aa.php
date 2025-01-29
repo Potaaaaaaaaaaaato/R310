@@ -37,7 +37,7 @@ class __TwigTemplate_1e0fe7b7939398f701426ba105c67a15 extends Template
 
     protected function doGetParent(array $context): bool|string|Template|TemplateWrapper
     {
-        // line 1
+        // line 2
         return "base.html.twig";
     }
 
@@ -50,7 +50,7 @@ class __TwigTemplate_1e0fe7b7939398f701426ba105c67a15 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "r310/login.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "r310/login.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "r310/login.html.twig", 2);
         yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -60,7 +60,7 @@ class __TwigTemplate_1e0fe7b7939398f701426ba105c67a15 extends Template
 
     }
 
-    // line 3
+    // line 4
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -73,7 +73,7 @@ class __TwigTemplate_1e0fe7b7939398f701426ba105c67a15 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Connexion";
+        yield "Login";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -83,7 +83,7 @@ class __TwigTemplate_1e0fe7b7939398f701426ba105c67a15 extends Template
         yield from [];
     }
 
-    // line 5
+    // line 6
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -96,17 +96,32 @@ class __TwigTemplate_1e0fe7b7939398f701426ba105c67a15 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        yield "    <h1>Connexion</h1>
-    <form method=\"post\">
-        <label for=\"email\">Email</label>
-        <input type=\"email\" id=\"email\" name=\"email\" required>
-        
-        <label for=\"password\">Password</label>
-        <input type=\"password\" id=\"password\" name=\"password\" required>
-        
-        <button type=\"submit\">Se connecter</button>
-    </form>
+        // line 7
+        yield "    ";
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 7, $this->source); })())) {
+            // line 8
+            yield "        <div>";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 8, $this->source); })()), "messageKey", [], "any", false, false, false, 8), CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 8, $this->source); })()), "messageData", [], "any", false, false, false, 8), "security"), "html", null, true);
+            yield "</div>
+    ";
+        }
+        // line 10
+        yield "
+    <h1>Login</h1>
+
+    ";
+        // line 13
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["loginForm"]) || array_key_exists("loginForm", $context) ? $context["loginForm"] : (function () { throw new RuntimeError('Variable "loginForm" does not exist.', 13, $this->source); })()), 'form_start');
+        yield "
+        ";
+        // line 14
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["loginForm"]) || array_key_exists("loginForm", $context) ? $context["loginForm"] : (function () { throw new RuntimeError('Variable "loginForm" does not exist.', 14, $this->source); })()), 'widget');
+        yield "
+        <button type=\"submit\" class=\"btn\">Login</button>
+    ";
+        // line 16
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["loginForm"]) || array_key_exists("loginForm", $context) ? $context["loginForm"] : (function () { throw new RuntimeError('Variable "loginForm" does not exist.', 16, $this->source); })()), 'form_end');
+        yield "
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -138,26 +153,27 @@ class __TwigTemplate_1e0fe7b7939398f701426ba105c67a15 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  123 => 16,  118 => 14,  114 => 13,  109 => 10,  103 => 8,  100 => 7,  87 => 6,  64 => 4,  41 => 2,);
     }
 
     public function getSourceContext(): Source
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{# templates/r310/login.html.twig #}
+{% extends 'base.html.twig' %}
 
-{% block title %}Connexion{% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block body %}
-    <h1>Connexion</h1>
-    <form method=\"post\">
-        <label for=\"email\">Email</label>
-        <input type=\"email\" id=\"email\" name=\"email\" required>
-        
-        <label for=\"password\">Password</label>
-        <input type=\"password\" id=\"password\" name=\"password\" required>
-        
-        <button type=\"submit\">Se connecter</button>
-    </form>
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <h1>Login</h1>
+
+    {{ form_start(loginForm) }}
+        {{ form_widget(loginForm) }}
+        <button type=\"submit\" class=\"btn\">Login</button>
+    {{ form_end(loginForm) }}
 {% endblock %}", "r310/login.html.twig", "/Users/tristan/Documents/2eme_année_bis/R310/R310/templates/r310/login.html.twig");
     }
 }

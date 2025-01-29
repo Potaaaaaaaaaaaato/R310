@@ -1,0 +1,17 @@
+{# templates/r310/login.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <h1>Login</h1>
+
+    {{ form_start(loginForm) }}
+        {{ form_widget(loginForm) }}
+        <button type="submit" class="btn">Login</button>
+    {{ form_end(loginForm) }}
+{% endblock %}
