@@ -18,4 +18,12 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
+    'app_r310' => [[], ['_controller' => 'App\\Controller\\R310Controller::index'], [], [['text', '/r310']], [], [], []],
+    'app_register' => [[], ['_controller' => 'App\\Controller\\R310Controller::register'], [], [['text', '/register']], [], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\R310Controller::login'], [], [['text', '/login']], [], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\R310Controller::logout'], [], [['text', '/logout']], [], [], []],
+    'App\Controller\R310Controller::index' => [[], ['_controller' => 'App\\Controller\\R310Controller::index'], [], [['text', '/r310']], [], [], []],
+    'App\Controller\R310Controller::register' => [[], ['_controller' => 'App\\Controller\\R310Controller::register'], [], [['text', '/register']], [], [], []],
+    'App\Controller\R310Controller::login' => [[], ['_controller' => 'App\\Controller\\R310Controller::login'], [], [['text', '/login']], [], [], []],
+    'App\Controller\R310Controller::logout' => [[], ['_controller' => 'App\\Controller\\R310Controller::logout'], [], [['text', '/logout']], [], [], []],
 ];
