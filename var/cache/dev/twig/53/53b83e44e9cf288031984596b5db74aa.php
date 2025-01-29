@@ -174,6 +174,8 @@ class __TwigTemplate_1e0fe7b7939398f701426ba105c67a15 extends Template
         {{ form_widget(loginForm) }}
         <button type=\"submit\" class=\"btn\">Login</button>
     {{ form_end(loginForm) }}
-{% endblock %}", "r310/login.html.twig", "/Users/tristan/Documents/2eme_année_bis/R310/R310/templates/r310/login.html.twig");
+{% endblock %}
+
+", "r310/login.html.twig", "/Users/tristan/Documents/2eme_année_bis/R310/R310/templates/r310/login.html.twig");
     }
 }
